@@ -12,7 +12,7 @@ import connectToDatabase from "./db/db.js";
 connectToDatabase();
 const app = express();
 app.use(cors({
-  origin:"https://ems-front-end-eta.vercel.app",
+  origin:"https://ems-front-end-opal.vercel.app",
   credentials:true
 }));
 app.use(express.json());
