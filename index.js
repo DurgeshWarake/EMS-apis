@@ -11,7 +11,10 @@ import connectToDatabase from "./db/db.js";
 
 connectToDatabase();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin:"https://ems-front-end-eta.vercel.app",
+  credentials:true
+}));
 app.use(express.json());
 app.use(express.static("public/uploads"));
 app.use("/api/auth", router);
